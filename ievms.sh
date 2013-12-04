@@ -224,7 +224,7 @@ start_vm() {
 # if given.
 copy_to_vm() {
     log "Copying ${2} to ${3}"
-    VBoxManage guestcontrol "${1}" cp "${ievms_home}/${2}" "${3}" \
+    VBoxManage guestcontrol "${1}" cp "${ievms_home}/${2}" "${3}" --verbose \
         --username "${guest_user}" --password "${guest_pass}"
 }
 
